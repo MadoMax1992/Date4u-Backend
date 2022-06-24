@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.1.0/dist/quartz/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid"><div class="navbar-nav">
+            <a class="navbar-brand" href="#">Date4u</a>
+            <a class="nav-item nav-link" href="index">Home</a>
+            <a class="nav-link nav-item" href="profile">Profile</a>
+            <a class="nav-link nav-item" href="search">Search</a>
+        </div></div>
+    </nav>
+    <div class="jumbotron">
+        <h1 class="display-4">Willkommen</h1>
+        <p data-th-text="'Es gibt '+ (${numberOfProfiles}<50 ? 'bald ') +' 50 Profile in der Datenbank'"></p>
+        <div data-th-if="${numberOfProfiles>10}">
+            <div>Mehr als 10 Einhörner</div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
